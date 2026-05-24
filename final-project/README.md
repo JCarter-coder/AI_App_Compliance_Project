@@ -15,7 +15,13 @@ This project is the starter environment for a database-backed AI application bui
 
 ## How to Run
 
-1. Activate the virtual environment.
+1. Activate your virtual environment.
+
+   ### macOS / Linux
+
+   ```bash
+   python3 - m venv .venv
+   source .venv/bin/activate
 
 2. Install dependencies:
 
@@ -24,8 +30,10 @@ This project is the starter environment for a database-backed AI application bui
 
 3. Create the starter database:
 
+   ```bash
    python seed.py
 
 4. Run the Streamlit app:
 
+   ```bash
    streamlit run app.py
