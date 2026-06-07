@@ -1,16 +1,16 @@
-# Final Project Starter Environment
+# Final Project SOT Application Environment
 
 ## Project Description
 
-This project is the starter environment for a database-backed AI application built with Python, SQL, and Streamlit.
+This project is the SOT environment for a database-backed AI application built with Python, SQL, and Streamlit.
 
 ## Current Features
 
 - Python virtual environment
-- Streamlit starter application
-- SQLite starter database
-- SQL schema file
-- Seed script
+- Streamlit SOT application
+- SQLite SOT database
+- SQL SOT schema file
+- SOT Seed script
 - Database access module
 
 ## How to Run
@@ -47,11 +47,11 @@ This project is the starter environment for a database-backed AI application bui
 3. Create the starter database:
 
    ```bash
-   python seed.py
+   python SOTseed.py
    ```
 
 4. Run the Streamlit app:
 
    ```bash
-   streamlit run app.py
+   streamlit run SOT_app.py
    ```
