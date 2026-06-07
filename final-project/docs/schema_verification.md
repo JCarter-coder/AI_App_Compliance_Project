@@ -9,6 +9,8 @@ SELECT COUNT(*) AS Ranks
 FROM rank;
 ```
 
+![rank query](image.png)
+
 ### Status Training Codes
 
 This will display all 16 training status codes in this table.

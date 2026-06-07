@@ -35,7 +35,7 @@ def initialize_database() -> None:
         ("E-6", "Technical Sergeant", "TSgt", 23, 60, 20),
         ("E-7", "Master Sergeant", "MSgt", 24, 96, 24),
         ("E-8", "Senior Master Sergeant", "SMSgt", 20, 132, 26),
-        ("E-9", "Chief Master Sergeant", "CMSgt", 21, 168, 30),
+        ("E-9", "Chief Master Sergeant", "CMSgt", 21, 168, 30)
       ],
     )
 
@@ -85,7 +85,7 @@ def initialize_database() -> None:
         ("R", "The service member is fully qualified. Use this code when personnel complete upgrade training."),
         ("S", "The service member..."),
         ("T", "The service member..."),
-        ("Y", "The service member..."),
+        ("Y", "The service member...")
       ],
     )
 
@@ -93,13 +93,16 @@ def initialize_database() -> None:
 
     conn.executemany(
       """ 
-      INSERT INTO workcenter (office_name, office_symbol)
+      INSERT INTO workcenter (
+        office_name,
+        office_symbol
+      )
       VALUES (?, ?)
       """,
       [
         ("Electronic Maintenance Team", "EMT"),
         ("Missile Handling Team", "MHT"),
-        ("Facilities Maintenance Section", "FMS"),
+        ("Facilities Maintenance Section", "FMS")
       ],
     )
 
@@ -107,8 +110,11 @@ def initialize_database() -> None:
 
     conn.executemany(
       """ 
-      INSERT INTO master_training_plan (AFSC)
-      VALUES (?)
+      INSERT INTO master_training_plan (
+        WC_id,
+        AFSC
+      )
+      VALUES (?, ?)
       """,
       [],
     )
@@ -117,19 +123,24 @@ def initialize_database() -> None:
 
     conn.executemany(
       """ 
-      INSERT INTO master_training_tasks (AFSC, task_id, task_name)
-      VALUES (?, ?, ?)
+      INSERT INTO master_task_list (
+        AFSC,
+        skill_lvl,
+        task_id,
+        task_name
+      )
+      VALUES (?, ?, ?, ?)
       """,
       [
-        ("2M0X1", "EMT-001", "Remove Electronic Item"),
-        ("2M0X1", "EMT-002", "Install Electronic Item"),
-        ("2M0X1", "EMT-003", "Electrical Checkout"),
-        ("2M0X2", "MHT-001", "Remove Missile"),
-        ("2M0X2", "MHT-002", "Install Missile"),
-        ("2M0X2", "MHT-003", "Mechanical Checkout"),
-        ("2M0X3", "FMS-001", "Remove Component"),
-        ("2M0X3", "FMS-002", "Install Component"),
-        ("2M0X3", "FMS-003", "Facility Checkout"),
+        ("2M0X1", "5", "EMT-001", "Remove Electronic Item"),
+        ("2M0X1", "7", "EMT-002", "Install Electronic Item"),
+        ("2M0X1", "5", "EMT-003", "Electrical Checkout"),
+        ("2M0X2", "5", "MHT-001", "Remove Missile"),
+        ("2M0X2", "7", "MHT-002", "Install Missile"),
+        ("2M0X2", "5", "MHT-003", "Mechanical Checkout"),
+        ("2M0X3", "5", "FMS-001", "Remove Facility Component"),
+        ("2M0X3", "7", "FMS-002", "Install Facility Component"),
+        ("2M0X3", "5", "FMS-003", "Facility Checkout")
       ],
     )
 
@@ -137,8 +148,28 @@ def initialize_database() -> None:
 
     conn.executemany(
       """ 
-      INSERT INTO individual_training_plan (AFSC, training_tasks)
-      VALUES (?, ?)
+      INSERT INTO individual_training_plan (
+        DOD_id,
+        WC_id,
+        AFSC,
+        training_task
+      )
+      VALUES (?, ?, ?, ?)
+      """,
+      [],
+    )
+
+    # Career Development Courses (empty)
+
+    conn.executemany(
+      """ 
+      INSERT INTO career_dev_courses (
+        DOD_id,
+        CDC_version,
+        is_received,
+        is_completed
+      )
+      VALUES (?, ?, ?, ?)
       """,
       [],
     )
