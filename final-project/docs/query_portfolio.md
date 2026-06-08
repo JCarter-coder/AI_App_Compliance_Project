@@ -8,7 +8,8 @@ Purpose: This returns a list of all records from the personnel table including e
 SELECT *
 FROM personnel;
 ```
-![personnel snapshot](./images/personnel_snapshot.png.png)
+![personnel snapshot](./images/personnel_snapshot.png)
+
 All details regarding personnel information are displayed here.
 
 ### 2. Filtered WHERE query
@@ -22,6 +23,7 @@ WHERE TSC = 'B';
 ```
 
 ![5-lvl trainee list](./images/5-lvl_trainee_list.png)
+
 This is a filtered view of all trainees in 5-lvl training (i.e. TSC = 'B')
 
 ### 3. ORDER BY or LIMIT query
@@ -35,6 +37,7 @@ ORDER BY office_symbol, last_name;
 ```
 
 ![trainees ordered by office then last name](./images/ordered_list_of_trainees.png)
+
 This list of trainees has been ordered by workcenter then by last name.
 
 ### 4. JOIN query #1
@@ -49,6 +52,7 @@ LEFT JOIN master_task_list as mtl
 ```
 
 ![MTP join to MTL](./images/MTP_join_to_MTL.png)
+
 This view allows to see the tasks associated with each workcenter's MTP.
 
 ### 5. JOIN query #2
@@ -63,7 +67,8 @@ LEFT JOIN career_dev_courses as cdc
 ```
 
 ![Person joined to CDC order info](./images/person_joined_to_CDC_info.png)
-This view joins CDC order information to the student. Student's that reflect <NULL> in the CDC fields indicate that CDCs have not been ordered or updated. 
+
+This view joins CDC order information to the student. Student's that reflect \<NULL\> in the CDC fields indicate that CDCs have not been ordered or updated. 
 
 ### 6. Aggregation query
 
@@ -76,6 +81,7 @@ WHERE TSC = 'B' OR TSC = 'C';
 ```
 
 ![students in UGT](./images/students_in_UGT.png)
+
 This view displays the total count of all trainees in upgrade training.
 
 ### 7. GROUP BY query
@@ -90,6 +96,7 @@ GROUP BY office_symbol;
 ```
 
 ![Total in UGT per workcenter](./images/total_in_UGT_per_WC.png)
+
 This view lists the number of personnel in UGT per workcenter.
 
 ### 8. Data validation or AI-support retrieval query
@@ -105,4 +112,5 @@ WHERE cdc.CDC_order_id IS NULL;
 ```
 
 ![missing CDC order date](./images/needs_CDCs.png)
+
 This displays an individual who has not had their CDCs ordered yet.
