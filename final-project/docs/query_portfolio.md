@@ -1,5 +1,7 @@
 # Query Portfolio
 
+NOTE: I used the database management tool, Valentina Studio, to view my database and acquire snapshots. This was also helpful in graphically building up the remaining child tables that required references to the parent tables (e.g. MTL -> MTP -> workcenter).
+
 ### 1. Basic SELECT query
 
 Purpose: This returns a list of all records from the personnel table including every column.
