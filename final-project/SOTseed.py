@@ -39,7 +39,7 @@ def initialize_database() -> None:
       ],
     )
 
-    # Personnel (empty)
+    # Personnel (sample)
 
     conn.executemany(
       """ 
@@ -49,16 +49,57 @@ def initialize_database() -> None:
         last_name, 
         rank,
         date_of_enlistment, 
-        date_of_rank, 
+        date_of_rank,
+        date_arrived_station,
         date_of_separation,
         AFSC,
         TSC,
         supervisor_name,
-        WC_id
+        office_symbol
       )
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       """,
-      [],
+      [
+        ("123456789",
+         "Elena",
+         "Vance",
+         "A1C",
+         "2025-10-1",
+         "2026-05-14",
+         "2026-05-21",
+         "2031-09-30",
+         "2M0X1",
+         "B",
+         "TSgt Pepper",
+         "EMT"
+        ),
+        ("123987654",
+         "Marcus",
+         "Sterling",
+         "Amn",
+         "2025-10-1",
+         "2026-05-28",
+         "2026-06-2",
+         "2031-09-30",
+         "2M0X1",
+         "B",
+         "TSgt Pepper",
+         "EMT"
+        ),
+        ("223917664",
+         "Maya",
+         "Lin",
+         "SrA",
+         "2022-03-16",
+         "2025-12-01",
+         "2022-09-23",
+         "2028-03-15",
+         "2M0X2",
+         "C",
+         "TSgt Slaughter",
+         "MHT"
+        )
+      ],
     )
 
     # Training Status Codes and Definitions
@@ -112,9 +153,10 @@ def initialize_database() -> None:
       """ 
       INSERT INTO master_training_plan (
         WC_id,
+        plan_title,
         AFSC
       )
-      VALUES (?, ?)
+      VALUES (?, ?, ?)
       """,
       [],
     )
@@ -124,24 +166,15 @@ def initialize_database() -> None:
     conn.executemany(
       """ 
       INSERT INTO master_task_list (
+        MTP_id,
         AFSC,
         skill_lvl,
         task_id,
         task_name
       )
-      VALUES (?, ?, ?, ?)
+      VALUES (?, ?, ?, ?, ?)
       """,
-      [
-        ("2M0X1", "5", "EMT-001", "Remove Electronic Item"),
-        ("2M0X1", "7", "EMT-002", "Install Electronic Item"),
-        ("2M0X1", "5", "EMT-003", "Electrical Checkout"),
-        ("2M0X2", "5", "MHT-001", "Remove Missile"),
-        ("2M0X2", "7", "MHT-002", "Install Missile"),
-        ("2M0X2", "5", "MHT-003", "Mechanical Checkout"),
-        ("2M0X3", "5", "FMS-001", "Remove Facility Component"),
-        ("2M0X3", "7", "FMS-002", "Install Facility Component"),
-        ("2M0X3", "5", "FMS-003", "Facility Checkout")
-      ],
+      [],
     )
 
     # Individual Training Plan (empty)
@@ -164,12 +197,15 @@ def initialize_database() -> None:
     conn.executemany(
       """ 
       INSERT INTO career_dev_courses (
+        CDC_order_id,
         DOD_id,
+        order_date,
         CDC_version,
         is_received,
+        is_EOC_scheduled,
         is_completed
       )
-      VALUES (?, ?, ?, ?)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
       """,
       [],
     )
