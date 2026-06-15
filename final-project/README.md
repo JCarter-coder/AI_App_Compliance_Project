@@ -47,7 +47,7 @@ This project is the SOT environment for a database-backed AI application built w
 3. Create the starter database:
 
    ```bash
-   python3 SOTseed.py
+   python3 SOTseedV2.py
    ```
 
 4. Run the Streamlit app:
