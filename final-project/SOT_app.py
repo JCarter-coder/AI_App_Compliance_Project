@@ -24,7 +24,7 @@ st.title("Status of Training App")
 st.write(
   """
   This Streamlit application is now reading data from a local SQLite database.
-  Iterations will be expanded to support this application. 
+  Iterations will be expanded to support AI features connecting to this application. 
   """
 )
 
@@ -50,11 +50,13 @@ try:
   st.dataframe(items, use_container_width=True)
 
   st.subheader("Master Task List by Work Center")
-  items = get_MTL_by_WC("EMT")
+  work_center = st.selectbox("Work Center:", ["EMT", "MHT", "FMS"], index=None, placeholder="Select...")
+  items = get_MTL_by_WC(work_center)
   st.dataframe(items, use_container_width=True)
 
   st.subheader("Individual Training Plans")
-  items = get_ITP_by_DOD_id("863287637")
+  DOD_ID_for_ITP = st.text_input("DoD ID:", "", placeholder="Enter DoD ID Number...")
+  items = get_ITP_by_DOD_id(DOD_ID_for_ITP)
   st.dataframe(items, use_container_width=True)
 
   st.subheader("Career Development Course Status")
@@ -63,6 +65,10 @@ try:
 
   st.subheader("Training Status by Work Center")
   items = get_training_status_by_WC()
+  st.dataframe(items, use_container_width=True)
+
+  st.subheader("Get Overdue CDCs")
+  items = get_overdue_cdcs()
   st.dataframe(items, use_container_width=True)
 
 except Exception as error:

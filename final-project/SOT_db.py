@@ -75,7 +75,7 @@ def get_training_status_by_WC() -> pd.DataFrame:
     SELECT
       office_symbol AS 'Workcenter',
       TSC,
-      COUNT(TSC)
+      COUNT(TSC) AS "Amount"
     FROM personnel
     GROUP BY office_symbol, TSC;
   """
