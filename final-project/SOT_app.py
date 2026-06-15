@@ -1,14 +1,16 @@
 import streamlit as st
 
 from SOT_db import (
-  get_rank, get_TSC, 
+  get_rank, 
+  get_TSC, 
   get_workcenter, 
   get_personnel, 
   get_training_status_by_WC, 
   get_MTP,
   get_MTL_by_WC,
   get_ITP_by_DOD_id,
-  get_CDC_by_DOD_id
+  get_CDC_by_DOD_id,
+  get_overdue_cdcs
 )
 
 st.set_page_config(
@@ -78,3 +80,6 @@ if __name__ == "__main__":
 
   print("Amn Vance's ITP:")
   print(get_ITP_by_DOD_id("863287637"))
+
+  print("Overdue CDCs (AI Possible Feature)")
+  print(get_overdue_cdcs())

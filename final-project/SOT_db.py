@@ -84,7 +84,7 @@ def get_training_status_by_WC() -> pd.DataFrame:
     return pd.read_sql_query(query, conn)
   
 def get_MTP() -> pd.DataFrame:
-  """Return all records from the workcenter table."""
+  """Return all master training plans."""
   query = """ 
     SELECT 
     plan_title AS 'MTP Title', 
@@ -96,7 +96,7 @@ def get_MTP() -> pd.DataFrame:
     return pd.read_sql_query(query, conn)
   
 def get_MTL_by_WC(office_symbol: str) -> pd.DataFrame:
-  """Return all personnel records by Training Status Code."""
+  """Return all master tasks lists by work center."""
   query = """ 
     SELECT 
       w.office_symbol AS "Work Center",
@@ -115,7 +115,7 @@ def get_MTL_by_WC(office_symbol: str) -> pd.DataFrame:
     return pd.read_sql_query(query, conn, params=(office_symbol,))
   
 def get_ITP_by_DOD_id(DOD_id: str) -> pd.DataFrame:
-  """Return all personnel records by Training Status Code."""
+  """Return all individual training plans by DOD ID."""
   query = """ 
     SELECT 
       p.rank AS "Rank",
@@ -126,8 +126,7 @@ def get_ITP_by_DOD_id(DOD_id: str) -> pd.DataFrame:
       itp.task_id AS "Task ID",
       itp.task_name AS "Task",
       itp.task_start_date AS "Start Date",
-      itp.is_task_complete,
-      CASE
+      CASE itp.is_task_complete
         WHEN itp.is_task_complete = 0 THEN "No"
         ELSE "Yes"
       END AS "Complete?"
@@ -141,7 +140,7 @@ def get_ITP_by_DOD_id(DOD_id: str) -> pd.DataFrame:
   
 
 def get_CDC_by_DOD_id(DOD_id: str) -> pd.DataFrame:
-  """Return all personnel records by Training Status Code."""
+  """Return all career development courses status by DOD ID."""
   query = """ 
     SELECT 
       p.rank AS "Rank",
@@ -151,18 +150,15 @@ def get_CDC_by_DOD_id(DOD_id: str) -> pd.DataFrame:
       p.supervisor_name AS "Supervisor",
       cdc.CDC_version AS "CDC Version",
       cdc.order_date AS "Order Date",
-      cdc.is_received, 
-      CASE
+      CASE cdc.is_received
         WHEN cdc.is_received = 0 THEN "No"
         ELSE "Yes"
       END AS "Received?",
-      cdc.is_EOC_scheduled,
-      CASE
+      CASE cdc.is_EOC_scheduled
         WHEN cdc.is_EOC_scheduled = 0 THEN "No"
         ELSE "Yes"
       END AS "Test Scheduled?",
-      cdc.is_completed,
-      CASE
+      CASE cdc.is_completed
         WHEN cdc.is_completed = 0 THEN "No"
         ELSE "Yes"
       END AS "Complete?"
@@ -173,3 +169,34 @@ def get_CDC_by_DOD_id(DOD_id: str) -> pd.DataFrame:
 
   with get_connection() as conn:
     return pd.read_sql_query(query, conn, params=(DOD_id,))
+  
+def get_overdue_cdcs() -> pd.DataFrame:
+  """Return all overdue CDCs."""
+  query = """ 
+    SELECT 
+      p.rank AS "Rank",
+      p.last_name AS "Last Name",
+      p.first_name AS "First",
+      p.office_symbol AS "Work Center",
+      p.supervisor_name AS "Supervisor",
+      cdc.CDC_version AS "CDC Version",
+      cdc.order_date AS "Order Date",
+      CASE cdc.is_received
+        WHEN cdc.is_received = 0 THEN "No"
+        ELSE "Yes"
+      END AS "Received?",
+      CASE cdc.is_EOC_scheduled
+        WHEN cdc.is_EOC_scheduled = 0 THEN "No"
+        ELSE "Yes"
+      END AS "Test Scheduled?",
+      CASE cdc.is_completed
+        WHEN cdc.is_completed = 0 THEN "No"
+        ELSE "Yes"
+      END AS "Complete?"
+    FROM personnel AS p
+    JOIN career_dev_courses AS cdc ON p.DOD_id = cdc.DOD_id
+    WHERE cdc.order_date <= date('now', '-365 days');
+  """
+
+  with get_connection() as conn:
+    return pd.read_sql_query(query, conn)
