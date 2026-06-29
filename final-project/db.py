@@ -1,6 +1,5 @@
 import sqlite3
 from pathlib import Path
-
 import pandas as pd
 
 DATABASE_PATH = Path("data/starter.db")

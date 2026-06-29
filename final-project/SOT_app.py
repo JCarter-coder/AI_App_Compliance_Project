@@ -75,17 +75,17 @@ except Exception as error:
   st.error("The application could not load database records.")
   st.exception(error)
 
-if __name__ == "__main__":
-  print("Testing database access functions...\n")
+# if __name__ == "__main__":
+#   print("Testing database access functions...\n")
 
-  print("Work Centers:")
-  print(get_workcenter())
+#   print("Work Centers:")
+#   print(get_workcenter())
 
-  print("Personnel:")
-  print(get_personnel())
+#   print("Personnel:")
+#   print(get_personnel())
 
-  print("Amn Vance's ITP:")
-  print(get_ITP_by_DOD_id("863287637"))
+#   print("Amn Vance's ITP:")
+#   print(get_ITP_by_DOD_id("863287637"))
 
-  print("Overdue CDCs (AI Possible Feature)")
-  print(get_overdue_cdcs())
+#   print("Overdue CDCs (AI Possible Feature)")
+#   print(get_overdue_cdcs())
