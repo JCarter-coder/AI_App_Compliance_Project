@@ -200,3 +200,26 @@ def get_overdue_cdcs() -> pd.DataFrame:
 
   with get_connection() as conn:
     return pd.read_sql_query(query, conn)
+  
+def get_personnel_for_ai() -> pd.DataFrame:
+  """Return all records from the personnel table."""
+  query = """ 
+    SELECT 
+      DOD_id AS 'DoD ID',
+      first_name AS 'First Name', 
+      last_name AS 'Last Name',
+      rank AS 'Rank',
+      AFSC,
+      TSC,
+      supervisor_name AS 'Supervisor',
+      office_symbol AS 'Workcenter',
+      date_of_enlistment AS 'DOE',
+      date_of_rank AS 'DOR',
+      date_arrived_station AS 'DAS',
+      date_of_separation AS 'DOS'
+    FROM personnel
+    WHERE TSC IS NOT 'R';
+  """
+
+  with get_connection() as conn:
+    return pd.read_sql_query(query, conn)

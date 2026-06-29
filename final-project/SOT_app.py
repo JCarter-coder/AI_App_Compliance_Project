@@ -10,7 +10,13 @@ from SOT_db import (
   get_MTL_by_WC,
   get_ITP_by_DOD_id,
   get_CDC_by_DOD_id,
-  get_overdue_cdcs
+  get_overdue_cdcs,
+  get_personnel_for_ai
+)
+
+from SOT_ai import (
+  evidence_dataframe_to_text,
+  generate_ai_response
 )
 
 st.set_page_config(
@@ -71,21 +77,26 @@ try:
   items = get_overdue_cdcs()
   st.dataframe(items, use_container_width=True)
 
+  st.subheader("Database Evidence Used")
+  evidence_df = get_personnel_for_ai()
+  if evidence_df.empty:
+    st.warning("No database evidence.")
+  else:
+    st.dataframe(evidence_df, use_container_width=True)
+
+    evidence_text = evidence_dataframe_to_text(evidence_df)
+
+    st.warning(
+      "AI output is generated from the database evidence shown above."
+      "Verify the response against the source records."
+    )
+    if st.button("Generate AI Summary"):
+      with st.spinner("Generating AI response..."):
+        ai_output = generate_ai_response(evidence_text)
+
+      st.subheader("AI Generated Output")
+      st.write(ai_output)
+
 except Exception as error:
   st.error("The application could not load database records.")
   st.exception(error)
-
-# if __name__ == "__main__":
-#   print("Testing database access functions...\n")
-
-#   print("Work Centers:")
-#   print(get_workcenter())
-
-#   print("Personnel:")
-#   print(get_personnel())
-
-#   print("Amn Vance's ITP:")
-#   print(get_ITP_by_DOD_id("863287637"))
-
-#   print("Overdue CDCs (AI Possible Feature)")
-#   print(get_overdue_cdcs())
