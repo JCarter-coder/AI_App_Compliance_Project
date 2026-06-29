@@ -50,7 +50,7 @@ This project is the SOT environment for a database-backed AI application built w
    python3 SOTseedV2.py
    ```
 
-4. To set up an AI, see what I did in ../docs/ai_feature_notes.md
+4. To set up an AI, see what I did in `../docs/ai_feature_notes.md`
 
 5. Run the Streamlit app:
 
