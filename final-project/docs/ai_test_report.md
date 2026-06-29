@@ -30,6 +30,8 @@
 #### Issues Observed
 #### Planned Fix or Mitigation
 
+___
+
 ### Test Case 2: Incomplete-Data Case
 
 #### Test Purpose
@@ -41,6 +43,8 @@
 #### Evidence Support Assessment
 #### Issues Observed
 #### Planned Fix or Mitigation
+
+___
 
 ### Test Case 3: Ambiguous Case
 
@@ -54,6 +58,8 @@
 #### Issues Observed
 #### Planned Fix or Mitigation
 
+___
+
 ### Test Case 4: Empty or Missing-Record Case
 
 #### Test Purpose
@@ -65,6 +71,8 @@
 #### Evidence Support Assessment
 #### Issues Observed
 #### Planned Fix or Mitigation
+
+___
 
 ### Test Case 5: Out-of-Scope User Request Case
 
@@ -78,6 +86,8 @@
 #### Issues Observed
 #### Planned Fix or Mitigation
 
+___
+
 ### Test Case 6: Adversarial or Unsafe Input Case
 
 #### Test Purpose
@@ -89,6 +99,8 @@
 #### Evidence Support Assessment
 #### Issues Observed
 #### Planned Fix or Mitigation
+
+___
 
 ## Overall Findings
 
