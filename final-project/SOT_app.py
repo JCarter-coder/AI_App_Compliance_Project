@@ -87,7 +87,7 @@ try:
     evidence_text = evidence_dataframe_to_text(evidence_df)
 
     st.warning(
-      "AI output is generated from the database evidence shown above."
+      "AI output is generated from the database evidence shown above. "
       "Verify the response against the source records."
     )
     if st.button("Generate AI Summary"):

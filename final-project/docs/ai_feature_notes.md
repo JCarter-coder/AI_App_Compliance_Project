@@ -35,3 +35,5 @@ response = client.responses.create(
 
 print(response.output_text)
 ```
+
+Currently, my AI App Compliance Project summarizes the filtered personnel table for those in upgrade training.
