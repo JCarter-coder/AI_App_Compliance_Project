@@ -40,6 +40,7 @@ CREATE TABLE personnel (
   date_of_separation DATE NOT NULL,
   AFSC TEXT NOT NULL CHECK (AFSC IN ("2M0X1", "2M0X2", "2M0X3")),
   TSC TEXT NOT NULL CHECK (TSC IN ("A", "B", "C", "R")),
+  TSC_date DATE NOT NULL,
   supervisor_name TEXT NOT NULL DEFAULT 'TBD',
   office_symbol TEXT NOT NULL CHECK (office_symbol IN ("EMT", "MHT", "FMS"))
 );
