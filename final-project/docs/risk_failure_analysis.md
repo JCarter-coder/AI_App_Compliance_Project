@@ -22,17 +22,17 @@ User -> Streamlit -> SOT_db.py -> SQLite database -> evidence display -> SOT_ai.
 ## Detailed Risk Discussion
 
 ### Risk 1
-*What is the risk?*
+#### *What is the risk?*
   Dependency problems.
-*Where does it occur in the system?*
+#### *Where does it occur in the system?*
   Python application.
-*Why does it matter?*
+#### *Why does it matter?*
   Cyber threats and attack vectors must be mitigated to safeguard data. 
-*What evidence from testing or development revealed this risk?*
+#### *What evidence from testing or development revealed this risk?*
   This risk is inherent is software development. Over tiem, decisions must be made whether to continue supporting systems or migrate them to new systems.
-*What mitigation would reduce the risk?*
+#### *What mitigation would reduce the risk?*
   CI/CD automated pipelines can be used with auditing tools to check for vulnerabilities within the app's dependency trees.
-*What limitation remains after mitigation?*
+#### *What limitation remains after mitigation?*
   Developers will need to review the flagged dependencies to determine if changes are required or if the known risks are acceptable.
 
 ### Risk 2
