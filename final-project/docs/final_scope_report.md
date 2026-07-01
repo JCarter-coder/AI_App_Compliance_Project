@@ -55,7 +55,7 @@ This AI feature utilizes an OpenAI client connected database allowing a Unit Tra
 | **Component** | **Status** | **Notes** |
 | :------- | :------: | :---------- |
 | Schema | Complete | `SOTschemaV2.sql` creates eight tables |
-| Seed data | Complete | `SOTseedV2.sql` plus files within `/seed` |
+| Seed data | Complete | `SOTseedV2.sql` plus files within `/seeds` directory |
 | Query portfolio | Complete | Includes several fundamental queries to connect data across tables |
 | Python database layer | Mostly complete | `SOT_db.py` includes at least 11 functions |
 | Streamlit interface | In Progress | Displays all records in database, working on dashboards based on roles |
