@@ -2,11 +2,11 @@
 
 ## Project and AI Feature Overview
 
-
+This project establishes a database connected to an OpenAI client allowing a Unit Training Manager in the United States Air Force to obtain better insight into the training health of their unit, ensuring compliance with instructions and policies, and reporting this to their commander.
 
 ## Test Environment
 
-
+A static review was conducted on this project. Once the issues listed in the table below are addressed, more targeted testing will be performed using PyTest between the various components of the project (e.g. database, frontend, ai client).
 
 ## Test Case Summary Table
 
@@ -33,10 +33,11 @@
 #### Database Evidence Retrieved
   All personnel records.
 #### Expected Behavior
-  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
+  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from all of the records.
 #### Actual AI Output
-  A summary of training status groups by Training Status Codes and individuals.
+  An extensive summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
+![Summary Overall](./images/Summary_Overall.png)
 #### Issues Observed
 #### Planned Fix or Mitigation
   Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
@@ -54,10 +55,11 @@ ___
 #### Database Evidence Retrieved
   All personnel records.
 #### Expected Behavior
-  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
+  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from all of the records.
 #### Actual AI Output
-  A summary of training status groups by Training Status Codes and individuals.
+  An extensive summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
+![Summary TSC B](./images/Summary_TSC_B.png)
 #### Issues Observed
 #### Planned Fix or Mitigation
   Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
@@ -75,10 +77,11 @@ ___
 #### Database Evidence Retrieved
   All personnel records.
 #### Expected Behavior
-  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
+  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from all of the records.
 #### Actual AI Output
-  A summary of training status groups by Training Status Codes and individuals.
+  An extensive summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
+![Summary TSC C](./images/Summary_TSC_C.png)
 #### Issues Observed
 #### Planned Fix or Mitigation
   Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
@@ -96,10 +99,11 @@ ___
 #### Database Evidence Retrieved
   All personnel records.
 #### Expected Behavior
-  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
+  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from all of the records.
 #### Actual AI Output
-  A summary of training status groups by Training Status Codes and individuals.
+  An extensive summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
+![Summary TSC R](./images/Summary_TSC_R.png)
 #### Issues Observed
 #### Planned Fix or Mitigation
   Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
@@ -117,9 +121,9 @@ ___
 #### Database Evidence Retrieved
   All personnel records.
 #### Expected Behavior
-  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
+  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from all of the records.
 #### Actual AI Output
-  A summary of training status groups by Training Status Codes and individuals.
+  An extensive summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
 #### Issues Observed
 #### Planned Fix or Mitigation
@@ -138,9 +142,9 @@ ___
 #### Database Evidence Retrieved
   All personnel records.
 #### Expected Behavior
-  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
+  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from all of the records.
 #### Actual AI Output
-  A summary of training status groups by Training Status Codes and individuals.
+  An extensive summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
 #### Issues Observed
 #### Planned Fix or Mitigation
@@ -148,7 +152,8 @@ ___
 
 ## Overall Findings
 
-
+Overall, the AI summary feature for the UTM is working as intended. More adjustments will need to be made to the database tables so that the AI can provide more meaningful and targeted feedback for the UTM to address.
 
 ## Planned Fixes or Improvements
 
+Additional fields of information will need to be incorporated to allow the AI to provide more focused and meaningful summaries of training status. Once incorporated, the AI features can be expanded further to assist workcenter supervisors in developing their Master Training Plans which will help them ensure sufficient task coverage within their workcenters.
