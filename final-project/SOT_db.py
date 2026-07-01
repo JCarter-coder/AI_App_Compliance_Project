@@ -57,7 +57,7 @@ def get_personnel() -> pd.DataFrame:
       rank AS 'Rank',
       AFSC,
       TSC,
-      TSC_date,
+      TSC_date AS 'TSC Date',
       supervisor_name AS 'Supervisor',
       office_symbol AS 'Workcenter',
       date_of_enlistment AS 'DOE',
@@ -212,15 +212,16 @@ def get_personnel_for_ai() -> pd.DataFrame:
       rank AS 'Rank',
       AFSC,
       TSC,
-      TSC_date,
+      TSC_date AS 'TSC Date',
       supervisor_name AS 'Supervisor',
       office_symbol AS 'Workcenter',
       date_of_enlistment AS 'DOE',
       date_of_rank AS 'DOR',
       date_arrived_station AS 'DAS',
-      date_of_separation AS 'DOS'
+      date_of_separation AS 'DOS',
+      tsc.defined
     FROM personnel
-    WHERE TSC IS NOT 'R';
+    JOIN training_status_code AS tsc USING (TSC);
   """
 
   with get_connection() as conn:
