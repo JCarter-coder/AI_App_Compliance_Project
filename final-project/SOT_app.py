@@ -25,6 +25,9 @@ st.set_page_config(
   layout="wide"
 )
 
+if "role" not in st.session_state:
+  st.session_state.role = None
+
 st.title("Status of Training App")
 
 st.write(
@@ -35,6 +38,21 @@ st.write(
 )
 
 try:
+
+  # This is used to display the selected role at the top of the screen
+  placeholder = st.empty()
+  placeholder.write("No role has been selected.")
+
+  st.sidebar.title("Training Menu")
+  sidebar_input = st.sidebar.selectbox(
+    "Select Role", 
+    ["Unit Training Manager", "Work Center Supervisor", "Supervisor"]
+  )
+
+  if st.sidebar.button("Submit"):
+    st.session_state.role = sidebar_input
+    placeholder.write(st.session_state.role + " Screen")
+
   st.subheader("Enlisted Ranks")
   items = get_rank()
   st.dataframe(items, use_container_width=True)
