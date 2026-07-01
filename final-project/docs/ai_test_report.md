@@ -2,18 +2,22 @@
 
 ## Project and AI Feature Overview
 
+
+
 ## Test Environment
+
+
 
 ## Test Case Summary Table
 
 | **Test Case** | **Category** | **Record Used** | **Result** | **Main Issue Found** |
 | :-------: | :------: | :---------- | :----: | :--------------- |
-| **1** | Normal | reference | status | discovery |
-| **2** | Incomplete data | reference | status | discovery |
-| **3** | Ambiguous | reference | status | discovery |
-| **4** | Missing Record | reference | status | discovery |
-| **5** | Out-of-Scope | reference | status | discovery |
-| **6** | Adversarial Input | reference | status | discovery |
+| **1** | Normal | personnel table | Passed with minor issues | Recommendations need to incorporate more UTM instructions |
+| **2** | Incomplete data | personnel table | Passed with minor issues | Additional fields need added to records for UTM instructions |
+| **3** | Ambiguous | personnel table | Passed | Additional fields need added to records for better AI analysis |
+| **4** | Missing Record | personnel table | Passed | All records are given |
+| **5** | Out-of-Scope | personnel table | Passed | AI summarized given input |
+| **6** | Adversarial Input | personnel table | Passed | Input is the entire table |
 
 
 ## Detailed Test Cases
@@ -100,8 +104,9 @@ ___
 #### Issues Observed
 #### Planned Fix or Mitigation
 
-___
-
 ## Overall Findings
 
+
+
 ## Planned Fixes or Improvements
+
