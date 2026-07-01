@@ -25,126 +25,126 @@
 ### Test Case 1: Normal Case
 
 #### Test Purpose
-To review a training summary of personnel, noting individuals' AFSC, TSC, UGT, and timeline parameters.
+  To review a training summary of personnel, noting individuals' AFSC, TSC, UGT, and timeline parameters.
 #### User Action or Input
-Generate AI Summary button click
+  Generate AI Summary button click
 #### Database Record(s) Used
-The Personnel Table
+  The Personnel Table
 #### Database Evidence Retrieved
-All personnel records.
+  All personnel records.
 #### Expected Behavior
-A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
+  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
 #### Actual AI Output
-A summary of training status groups by Training Status Codes and individuals.
+  A summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
 #### Issues Observed
 #### Planned Fix or Mitigation
-Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
+  Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
 
 ___
 
 ### Test Case 2: Incomplete-Data Case
 
 #### Test Purpose
-To review a training summary of personnel, noting individuals' AFSC, TSC, UGT, and timeline parameters.
+  To review a training summary of personnel, noting individuals' AFSC, TSC, UGT, and timeline parameters.
 #### User Action or Input
-Generate AI Summary button click
+  Generate AI Summary button click
 #### Database Record(s) Used
-The Personnel Table
+  The Personnel Table
 #### Database Evidence Retrieved
-All personnel records.
+  All personnel records.
 #### Expected Behavior
-A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
+  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
 #### Actual AI Output
-A summary of training status groups by Training Status Codes and individuals.
+  A summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
 #### Issues Observed
 #### Planned Fix or Mitigation
-Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
+  Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
 
 ___
 
 ### Test Case 3: Ambiguous Case
 
 #### Test Purpose
-To review a training summary of personnel, noting individuals' AFSC, TSC, UGT, and timeline parameters.
+  To review a training summary of personnel, noting individuals' AFSC, TSC, UGT, and timeline parameters.
 #### User Action or Input
-Generate AI Summary button click
+  Generate AI Summary button click
 #### Database Record(s) Used
-The Personnel Table
+  The Personnel Table
 #### Database Evidence Retrieved
-All personnel records.
+  All personnel records.
 #### Expected Behavior
-A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
+  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
 #### Actual AI Output
-A summary of training status groups by Training Status Codes and individuals.
+  A summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
 #### Issues Observed
 #### Planned Fix or Mitigation
-Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
+  Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
 
 ___
 
 ### Test Case 4: Empty or Missing-Record Case
 
 #### Test Purpose
-To review a training summary of personnel, noting individuals' AFSC, TSC, UGT, and timeline parameters.
+  To review a training summary of personnel, noting individuals' AFSC, TSC, UGT, and timeline parameters.
 #### User Action or Input
-Generate AI Summary button click
+  Generate AI Summary button click
 #### Database Record(s) Used
-The Personnel Table
+  The Personnel Table
 #### Database Evidence Retrieved
-All personnel records.
+  All personnel records.
 #### Expected Behavior
-A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
+  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
 #### Actual AI Output
-A summary of training status groups by Training Status Codes and individuals.
+  A summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
 #### Issues Observed
 #### Planned Fix or Mitigation
-Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
+  Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
 
 ___
 
 ### Test Case 5: Out-of-Scope User Request Case
 
 #### Test Purpose
-To review a training summary of personnel, noting individuals' AFSC, TSC, UGT, and timeline parameters.
+  To review a training summary of personnel, noting individuals' AFSC, TSC, UGT, and timeline parameters.
 #### User Action or Input
-Generate AI Summary button click
+  Generate AI Summary button click
 #### Database Record(s) Used
-The Personnel Table
+  The Personnel Table
 #### Database Evidence Retrieved
-All personnel records.
+  All personnel records.
 #### Expected Behavior
-A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
+  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
 #### Actual AI Output
-A summary of training status groups by Training Status Codes and individuals.
+  A summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
 #### Issues Observed
 #### Planned Fix or Mitigation
-Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
+  Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
 
 ___
 
 ### Test Case 6: Adversarial or Unsafe Input Case
 
 #### Test Purpose
-To review a training summary of personnel, noting individuals' AFSC, TSC, UGT, and timeline parameters.
+  To review a training summary of personnel, noting individuals' AFSC, TSC, UGT, and timeline parameters.
 #### User Action or Input
-Generate AI Summary button click
+  Generate AI Summary button click
 #### Database Record(s) Used
-The Personnel Table
+  The Personnel Table
 #### Database Evidence Retrieved
-All personnel records.
+  All personnel records.
 #### Expected Behavior
-A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
+  A summary of the Personnel Table using some UTM requirements from DAFMAN36-2689 and relevant fields from the all of the records.
 #### Actual AI Output
-A summary of training status groups by Training Status Codes and individuals.
+  A summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
 #### Issues Observed
 #### Planned Fix or Mitigation
-Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
+  Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
 
 ## Overall Findings
 
