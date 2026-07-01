@@ -37,8 +37,9 @@ A static review was conducted on this project. Once the issues listed in the tab
 #### Actual AI Output
   An extensive summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
-![Summary Overall](./images/Summary_Overall.png)
+  ![Summary Overall](./images/Summary_Overall.png)
 #### Issues Observed
+  Additional data and their relationships between tables need further definition to provide a better picture of the unit's training status.
 #### Planned Fix or Mitigation
   Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
 
@@ -59,8 +60,9 @@ ___
 #### Actual AI Output
   An extensive summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
-![Summary TSC B](./images/Summary_TSC_B.png)
+  ![Summary TSC B](./images/Summary_TSC_B.png)
 #### Issues Observed
+  Additional data and their relationships between tables need further definition to provide a better picture of the unit's training status.
 #### Planned Fix or Mitigation
   Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
 
@@ -81,8 +83,9 @@ ___
 #### Actual AI Output
   An extensive summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
-![Summary TSC C](./images/Summary_TSC_C.png)
+  ![Summary TSC C](./images/Summary_TSC_C.png)
 #### Issues Observed
+  Additional data and their relationships between tables need further definition to provide a better picture of the unit's training status.
 #### Planned Fix or Mitigation
   Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
 
@@ -103,8 +106,9 @@ ___
 #### Actual AI Output
   An extensive summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
-![Summary TSC R](./images/Summary_TSC_R.png)
+  ![Summary TSC R](./images/Summary_TSC_R.png)
 #### Issues Observed
+  Additional data and their relationships between tables need further definition to provide a better picture of the unit's training status.
 #### Planned Fix or Mitigation
   Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
 
@@ -125,7 +129,9 @@ ___
 #### Actual AI Output
   An extensive summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
+  (see above cases)
 #### Issues Observed
+  Additional data and their relationships between tables need further definition to provide a better picture of the unit's training status.
 #### Planned Fix or Mitigation
   Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
 
@@ -146,7 +152,9 @@ ___
 #### Actual AI Output
   An extensive summary of training status groups by Training Status Codes and individuals.
 #### Evidence Support Assessment
+  (see above cases)
 #### Issues Observed
+  Additional data and their relationships between tables need further definition to provide a better picture of the unit's training status.
 #### Planned Fix or Mitigation
   Additional fields must be added to the database so that more requirements can be sufficiently analyzed to align with Air Force Instructions and policies.
 
