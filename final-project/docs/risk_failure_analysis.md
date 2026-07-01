@@ -22,32 +22,32 @@ User -> Streamlit -> SOT_db.py -> SQLite database -> evidence display -> SOT_ai.
 ## Detailed Risk Discussion
 
 ### Risk 1
-#### *What is the risk?*
-  Dependency problems.
-#### *Where does it occur in the system?*
-  Python application.
-#### *Why does it matter?*
-  Cyber threats and attack vectors must be mitigated to safeguard data. 
-#### *What evidence from testing or development revealed this risk?*
-  This risk is inherent is software development. Over tiem, decisions must be made whether to continue supporting systems or migrate them to new systems.
-#### *What mitigation would reduce the risk?*
-  CI/CD automated pipelines can be used with auditing tools to check for vulnerabilities within the app's dependency trees.
-#### *What limitation remains after mitigation?*
-  Developers will need to review the flagged dependencies to determine if changes are required or if the known risks are acceptable.
+#### What is the risk?
+  *Dependency problems.*
+#### Where does it occur in the system?
+  *Python application.*
+#### Why does it matter?
+  *Cyber threats and attack vectors must be mitigated to safeguard data.*
+#### What evidence from testing or development revealed this risk?
+  *This risk is inherent is software development. Over tiem, decisions must be made whether to continue supporting systems or migrate them to new systems.*
+#### What mitigation would reduce the risk?
+  *CI/CD automated pipelines can be used with auditing tools to check for vulnerabilities within the app's dependency trees.*
+#### What limitation remains after mitigation?
+  *Developers will need to review the flagged dependencies to determine if changes are required or if the known risks are acceptable.*
 
 ### Risk 2
-#### *What is the risk?*
-  AI hallucination.
-#### *Where does it occur in the system?*
-  AI-output.
-#### *Why does it matter?*
-  When Air Force Instructions and policies are added to the context of the prompts, there will be hundreds of pages of material. It could be easy accept summaries if the references provided by the output don't seem too outlandish.
-#### *What evidence from testing or development revealed this risk?*
-  As more context was provided to the AI prompt, more information was referenced within the output. This increase in output should be expected as larger context is provided and until more refinement of the prompting is addressed.
-#### *What mitigation would reduce the risk?*
-  Verification by the user of the references the AI provides will provide a validation check to the output. Collected user feedback can be utilized to better address the prompts and context provided.
-#### *What limitation remains after mitigation?*
-  Continuous verification will required by the user. The time saved by the AI summaries should still be a positive offset to this verification process.
+#### What is the risk?
+  *AI hallucination.*
+#### Where does it occur in the system?
+  *AI-output.*
+#### Why does it matter?
+  *When Air Force Instructions and policies are added to the context of the prompts, there will be hundreds of pages of material. It could be easy accept summaries if the references provided by the output don't seem too outlandish.*
+#### What evidence from testing or development revealed this risk?
+  *As more context was provided to the AI prompt, more information was referenced within the output. This increase in output should be expected as larger context is provided and until more refinement of the prompting is addressed.*
+#### What mitigation would reduce the risk?
+  *Verification by the user of the references the AI provides will provide a validation check to the output. Collected user feedback can be utilized to better address the prompts and context provided.*
+#### What limitation remains after mitigation?
+  *Continuous verification will required by the user. The time saved by the AI summaries should still be a positive offset to this verification process.*
 
 ### Risk 3
 #### What is the risk?
@@ -72,7 +72,7 @@ User -> Streamlit -> SOT_db.py -> SQLite database -> evidence display -> SOT_ai.
 ## Mitigation Plan
 
 | **Mitigation** | **Status** | **Risk Reduced** |
-| :-------: | :------: | :---------- |
+| :------- | :------: | :---------- |
 | Compartmentalize user dashboards by role | In Progress | Lack of access controls |
 | Create roles and authenticate users | Not Yet Started | Lack of access controls |
 | Validate references provided by AI output | Planned | AI hallucination |
