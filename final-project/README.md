@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This project is the SOT environment for a database-backed AI application built with Python, SQL, and Streamlit.
+This project is the SOT environment for a database-backed AI application built with Python, SQLite, and Streamlit.
 
 ## Current Features
 
@@ -57,3 +57,5 @@ This project is the SOT environment for a database-backed AI application built w
    ```bash
    streamlit run SOT_app.py
    ```
+
+6. Explore the `/docs` directory markdown files for focused insights of this application by topic.
